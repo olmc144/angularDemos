@@ -1,0 +1,17 @@
+<div class="contenedor">
+  <span class="radioClass">Mostrar: </span>
+  <span class="opc">
+    <input type="radio" id="exampleRadios1" name="options" value="All" 
+    [(ngModel)]="selectedAllUser" 
+    (change)="obtenerGenero('todos')" />
+    <label class="form-check-label ml-1" for="exampleRadios1">Todos <span class="badge badge-primary">{{ todos }}</span></label>
+  </span>
+  <span class="opc">
+    <input type="radio" name="options" id="exampleRadios2" (change)="obtenerGenero('M')"/>
+    <label class="form-check-label  ml-1" for="exampleRadios2">Masculino <span class="badge badge-danger">{{ masculino }}</span></label>
+  </span>
+  <span class="opc">
+    <input type="radio" name="options" id="exampleRadios3" (change)="obtenerGenero('F')"/>
+    <label class="form-check-label  ml-1" for="exampleRadios3">Femenino <span class="badge badge-success">{{ femenino }}</span></label>
+  </span>
+</div>

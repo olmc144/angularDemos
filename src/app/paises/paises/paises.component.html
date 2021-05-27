@@ -1,0 +1,30 @@
+<!-- <div id="columnas">
+  <div *ngFor="let pais of paises">
+     <div><b><span>Nombre: </span></b>{{pais.nombre}}</div>
+     <div><b><span>Capital: </span></b>{{pais.capital}}</div>
+     <div><b><span>Población: </span></b>{{pais.poblacion}}</div>
+     <div><b><span>Moneda: </span></b>{{pais.moneda}}</div>
+  </div>
+</div> -->
+  <table *ngIf="paises.length > 0" class="table table-hover mt-3">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Capital</th>
+        <th>Población</th>
+        <th>Moneda</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pais of paises">
+        <td>{{ pais.nombre }}</td>
+        <td>{{ pais.capital }}</td>
+        <td>{{ pais.poblacion }}</td>
+        <td>{{ pais.moneda }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" routerLink="/inicio">Regresar</button>
+  <div *ngIf="paises.length == 0" class="row mt-5">
+    <h5>No hay paises para mostrar</h5>
+  </div>
